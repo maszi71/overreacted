@@ -2,9 +2,14 @@ import { POST_URL } from "../constants/url";
 import { convertDate, createPostDate } from "../utils/date";
 import { montserrat } from "../font";
 import styles from "./page.module.scss";
+import { REVALIDATE_TIME } from "../constants/revalidate";
 
 async function getPostItem(id: string) {
-  const res = await fetch(`${POST_URL}/${id}`);
+  const res = await fetch(`${POST_URL}/${id}` , {
+    next : {
+      revalidate : REVALIDATE_TIME
+    }
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

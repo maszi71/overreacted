@@ -3,9 +3,14 @@ import { convertDate, createPostDate } from "./utils/date";
 import { PostType } from "./types/PostType";
 import PostList from "./components/PostList/PostList";
 import { POST_URL } from "./constants/url";
+import { REVALIDATE_TIME } from "./constants/revalidate";
 
 async function getPostList() {
-  const res = await fetch(POST_URL);
+  const res = await fetch(POST_URL , {
+    next : {
+      revalidate : REVALIDATE_TIME
+    }
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
