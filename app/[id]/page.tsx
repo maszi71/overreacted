@@ -3,6 +3,18 @@ import { convertDate, createPostDate } from "../utils/date";
 import { montserrat } from "../font";
 import styles from "./page.module.scss";
 import { REVALIDATE_TIME } from "../constants/revalidate";
+import { PostType } from "../types/PostType";
+
+export const dynamicParams = false;
+
+
+export async function generateStaticParams() {
+  const posts = await fetch(POST_URL).then((res) => res.json())
+ 
+  return posts.map((post : PostType) => ({
+    id: post.id.toString(),
+  }))
+}
 
 async function getPostItem(id: string) {
   const res = await fetch(`${POST_URL}/${id}` , {
