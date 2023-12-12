@@ -1,0 +1,46 @@
+:root {
+  --color-gray-light: rgb(74, 85, 104);
+  --color-text-light: rgb(34, 34, 34);
+  --color-bg-light: rgb(255, 255, 255);
+
+  --color-gray-dark: rgb(209, 213, 219);
+  --color-text-dark: rgba(255, 255, 255, 0.88);
+  --color-bg-dark: rgb(40, 44, 53);
+}
+
+[data-theme="light"] {
+  --color-background: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --color-date: var(--color-gray-light);
+}
+
+[data-theme="dark"] {
+  --color-background: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-date: var(--color-gray-dark);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: 42rem;
+  line-height: 28px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
