@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  .link {
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var( --color-logo);
+  }
+}
