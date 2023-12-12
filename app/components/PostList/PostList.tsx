@@ -11,12 +11,11 @@ type PostListType = {
 const PostList: FC<PostListType> = (props) => {
   const { list } = props;
   const { observerReference, visibleItems } = useInfiniteScroll(list, 10);
-  console.log(visibleItems)
 
   return (
     <div>
       {visibleItems.map((post: PostType, index: number) => (
-        <Item key={post.id} item={post} index={index} />
+        <Item key={post.id} item={post} index={index} total={list.length} />
       ))}
       <div style={{ height: "2.5rem" }} ref={observerReference} />
     </div>
