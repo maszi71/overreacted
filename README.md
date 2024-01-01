@@ -1,7 +1,9 @@
 
 # overreacted
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) version 13 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project has been developed as part of a coding assignment, emphasizing the practical implementation of advanced web features using TypeScript and the latest web development techniques.
+
 
 - **Infinite Scroll**: Users can enjoy a seamless browsing experience with an infinite scroll enabling uninterrupted navigation through content.
 - **Dark/Light Mode Toggle**: Users can effortlessly switch between dark and light modes for comfortable readability. The mode preference is managed globally with Redux to maintain state across the application.
